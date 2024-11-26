@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cne0556n3bjiq"]
+
+[ext_resource type="Texture2D" uid="uid://cjkmeqg2cb4bw" path="res://icon.svg" id="1_3cjb3"]
+[ext_resource type="Script" path="res://player.gd" id="1_sla6m"]
+[ext_resource type="Script" path="res://spawner.gd" id="3_7klvr"]
+[ext_resource type="Script" path="res://fps_counter.gd" id="4_vhsla"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_sla6m")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_3cjb3")
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("3_7klvr")
+
+[node name="FPS" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("4_vhsla")
